@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIA Clinical Simulator</title>
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <div id="auth-modal">
+        <h2>Login / Register</h2>
+        <form id="auth-form">
+            <input type="text" placeholder="Username" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <nav id="main-nav">
+        <ul>
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#simulator">Simulator</a></li>
+            <li><a href="#stats">Stats</a></li>
+            <li><a href="#admin">Admin Panel</a></li>
+        </ul>
+    </nav>
+
+    <div id="dashboard">
+        <h1>Dashboard</h1>
+        <!-- Dashboard Content Goes Here -->
+    </div>
+
+    <div id="simulator">
+        <h1>Simulator</h1>
+        <!-- Simulator Content Goes Here -->
+    </div>
+
+    <div id="stats">
+        <h1>Performance Analytics</h1>
+        <!-- Stats Content Goes Here -->
+    </div>
+
+    <div id="admin-panel">
+        <h1>Admin Panel</h1>
+        <div id="tabs">
+            <button id="cases-tab">Cases</button>
+            <button id="media-tab">Media Upload</button>
+            <button id="users-tab">Users Management</button>
+        </div>
+        <div id="tab-content">
+            <div id="cases-content"> <!-- Cases Content --> </div>
+            <div id="media-content"> <!-- Media Upload Content --> </div>
+            <div id="users-content"> <!-- Users Management Content --> </div>
+        </div>
+    </div>
+
+    <!-- JS Files -->
+    <script src="auth.js"></script>
+    <script src="dashboard.js"></script>
+    <script src="simulator.js"></script>
+    <script src="stats.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>
