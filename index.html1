@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MIA Clinical Simulator</title>
+    <style>
+        body { background: #1a1a2e; color: #fff; font-family: Arial; }
+        .container { max-width: 400px; margin: 100px auto; padding: 20px; }
+        input, select { width: 100%; padding: 10px; margin: 10px 0; background: #333; color: #fff; border: 1px solid #00d4ff; }
+        button { width: 100%; padding: 10px; background: #00d4ff; color: #000; border: none; cursor: pointer; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="container" id="login">
+        <h1>MIA Clinical Simulator</h1>
+        Username: <input type="text" id="user"><br>
+        Password: <input type="password" id="pass"><br>
+        PIN: <input type="text" id="pin"><br>
+        <button onclick="doLogin()">Login</button>
+        <p>Admin: ashrafalas81/admin123/5678</p>
+        <p>Student: student1/pass123/1234</p>
+    </div>
+
+    <div id="dashboard" style="display:none;">
+        <h1>Dashboard</h1>
+        <button onclick="logout()">Logout</button>
+        <p>Welcome!</p>
+    </div>
+
+    <script>
+        function doLogin() {
+            const user = document.getElementById('user').value;
+            const pass = document.getElementById('pass').value;
+            const pin = document.getElementById('pin').value;
+            
+            if ((user === 'ashrafalas81' && pass === 'admin123' && pin === '5678') ||
+                (user === 'student1' && pass === 'pass123' && pin === '1234')) {
+                document.getElementById('login').style.display = 'none';
+                document.getElementById('dashboard').style.display = 'block';
+            } else {
+                alert('Invalid credentials');
+            }
+        }
+        
+        function logout() {
+            document.getElementById('login').style.display = 'block';
+            document.getElementById('dashboard').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
